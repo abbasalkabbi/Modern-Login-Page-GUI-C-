@@ -43,13 +43,19 @@ namespace ModernLoginPageGUIC {
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Panel^ panel3;
+	private: System::Windows::Forms::Panel^ panel4;
+	private: System::Windows::Forms::Panel^ panel5;
+	private: System::Windows::Forms::Panel^ panel6;
+	private: System::Windows::Forms::Panel^ panel7;
+	private: System::Windows::Forms::Panel^ panel8;
 	protected:
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -67,17 +73,26 @@ namespace ModernLoginPageGUIC {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::DimGray;
+			this->button1->BackColor = System::Drawing::Color::DarkGray;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Red;
+			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightCoral;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Tahoma", 12));
 			this->button1->ForeColor = System::Drawing::Color::White;
 			this->button1->Location = System::Drawing::Point(871, 0);
-			this->button1->Margin = System::Windows::Forms::Padding(0);
+			this->button1->Margin = System::Windows::Forms::Padding(1);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(46, 40);
 			this->button1->TabIndex = 0;
@@ -90,11 +105,12 @@ namespace ModernLoginPageGUIC {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Tahoma", 12));
 			this->label1->ForeColor = System::Drawing::Color::AliceBlue;
-			this->label1->Location = System::Drawing::Point(48, 109);
+			this->label1->Location = System::Drawing::Point(52, 128);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(82, 19);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"UserName";
+			this->label1->Click += gcnew System::EventHandler(this, &signin::label1_Click);
 			// 
 			// textBox1
 			// 
@@ -125,11 +141,12 @@ namespace ModernLoginPageGUIC {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Tahoma", 12));
 			this->label2->ForeColor = System::Drawing::Color::AliceBlue;
-			this->label2->Location = System::Drawing::Point(48, 176);
+			this->label2->Location = System::Drawing::Point(52, 195);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(78, 19);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"PassWord";
+			this->label2->Click += gcnew System::EventHandler(this, &signin::label2_Click);
 			// 
 			// panel2
 			// 
@@ -180,21 +197,77 @@ namespace ModernLoginPageGUIC {
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"Sign in";
 			// 
+			// panel3
+			// 
+			this->panel3->BackColor = System::Drawing::Color::DarkGray;
+			this->panel3->Location = System::Drawing::Point(503, 0);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(414, 492);
+			this->panel3->TabIndex = 9;
+			// 
+			// panel4
+			// 
+			this->panel4->BackColor = System::Drawing::Color::White;
+			this->panel4->Location = System::Drawing::Point(52, 116);
+			this->panel4->Margin = System::Windows::Forms::Padding(0);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(237, 2);
+			this->panel4->TabIndex = 10;
+			// 
+			// panel5
+			// 
+			this->panel5->BackColor = System::Drawing::Color::White;
+			this->panel5->Location = System::Drawing::Point(52, 184);
+			this->panel5->Margin = System::Windows::Forms::Padding(0);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(237, 2);
+			this->panel5->TabIndex = 11;
+			// 
+			// panel6
+			// 
+			this->panel6->BackColor = System::Drawing::Color::Gray;
+			this->panel6->Location = System::Drawing::Point(431, 30);
+			this->panel6->Name = L"panel6";
+			this->panel6->Size = System::Drawing::Size(200, 100);
+			this->panel6->TabIndex = 0;
+			// 
+			// panel7
+			// 
+			this->panel7->BackColor = System::Drawing::Color::Gray;
+			this->panel7->Location = System::Drawing::Point(392, 195);
+			this->panel7->Name = L"panel7";
+			this->panel7->Size = System::Drawing::Size(200, 100);
+			this->panel7->TabIndex = 12;
+			// 
+			// panel8
+			// 
+			this->panel8->BackColor = System::Drawing::Color::Gray;
+			this->panel8->Location = System::Drawing::Point(371, 354);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(200, 100);
+			this->panel8->TabIndex = 13;
+			// 
 			// signin
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::DimGray;
 			this->ClientSize = System::Drawing::Size(917, 491);
+			this->Controls->Add(this->panel8);
+			this->Controls->Add(this->panel7);
+			this->Controls->Add(this->panel6);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->panel5);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->panel3);
 			this->ForeColor = System::Drawing::Color::White;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"signin";
@@ -206,36 +279,54 @@ namespace ModernLoginPageGUIC {
 
 		}
 #pragma endregion
-		
+
 	private: System::Void signin_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void Exit(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();
+
 	}
-	
-private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+
+	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+
+	private: System::Void textBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
+		// username textbox when click 
+		label1->Location = System::Drawing::Point(52, 109);
+		label1->ForeColor = System::Drawing::Color::Blue;
+		panel1->BackColor = System::Drawing::Color::Blue;
+		panel4->BackColor = System::Drawing::Color::Blue;
+	}
+	private: System::Void textBox1_Leave(System::Object^ sender, System::EventArgs^ e) {
+		// username textbox textBox1_Leave
+		label1->Location = System::Drawing::Point(52, 128);
+		label1->ForeColor = System::Drawing::Color::White;
+		panel1->BackColor = System::Drawing::Color::White;
+		panel4->BackColor = System::Drawing::Color::White;
+	}
+	private: System::Void textBox2_Enter(System::Object^ sender, System::EventArgs^ e) {
+		// password textbox when click  
+		label2->Location = System::Drawing::Point(52, 176);
+		label2->ForeColor = System::Drawing::Color::Blue;
+		panel2->BackColor = System::Drawing::Color::Blue;
+		panel5->BackColor = System::Drawing::Color::Blue;
+	}
+	private: System::Void textBox2_Leave(System::Object^ sender, System::EventArgs^ e) {
+		// password textbox textBox2_Leave
+		label2->Location = System::Drawing::Point(52, 195);
+		label2->ForeColor = System::Drawing::Color::White;
+		panel2->BackColor = System::Drawing::Color::White;
+		panel5->BackColor = System::Drawing::Color::White;
+	}
+
+
+	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+		textBox1->Focus();
+	}
+	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+		textBox2->Focus();
+	}
+	};
 }
 
-private: System::Void textBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
-	// username textbox when click 
-	label1->ForeColor = System::Drawing::Color::Blue;
-	panel1->BackColor = System::Drawing::Color::Blue;
-}
-private: System::Void textBox1_Leave(System::Object^ sender, System::EventArgs^ e) {
-	// username textbox textBox1_Leave
-	label1->ForeColor = System::Drawing::Color::White;
-	panel1->BackColor = System::Drawing::Color::White;
-}
-private: System::Void textBox2_Enter(System::Object^ sender, System::EventArgs^ e) {
-	// password textbox when click 
-	label2->ForeColor = System::Drawing::Color::Blue;
-	panel2->BackColor = System::Drawing::Color::Blue;
-}
-private: System::Void textBox2_Leave(System::Object^ sender, System::EventArgs^ e) {
-	// password textbox textBox2_Leave
-	label2->ForeColor = System::Drawing::Color::White;
-	panel2->BackColor = System::Drawing::Color::White;
-}
 
-};
-}
